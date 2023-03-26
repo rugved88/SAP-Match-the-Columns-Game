@@ -8,7 +8,7 @@ from flask_mail import Mail, Message
 import vonage
 
 app = Flask(__name__)
-app.secret_key = 'your_secret_key'
+
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///leaderboard.db'
 db = SQLAlchemy(app)
 
@@ -17,8 +17,8 @@ db = SQLAlchemy(app)
 app.config['MAIL_SERVER'] = 'smtp.gmail.com'
 app.config['MAIL_PORT'] = 587
 app.config['MAIL_USE_TLS'] = True
-app.config['MAIL_USERNAME'] = 'sapbtpgame@gmail.com'  # Update with your email
-app.config['MAIL_PASSWORD'] = 'password@7710035822'  # Update with your email password
+app.config['MAIL_USERNAME'] = '######@gamil.com'  # Update with your email
+app.config['MAIL_PASSWORD'] = '######'  # Update with your email password
 
 mail = Mail(app)
 
@@ -75,8 +75,8 @@ oauth = OAuth(app)
 
 google = oauth.remote_app(
     'google',
-    consumer_key='406994588398-rco9spu6b4flk238oqqu8krj49jbb7p6.apps.googleusercontent.com',
-    consumer_secret='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',
+    consumer_key='############', #Update this using GCP API read README.MD
+    consumer_secret='#########', #Update this using GCP API read README.MD
     request_token_params={
         'scope': 'email profile'
     },
@@ -154,8 +154,8 @@ def generate_otp():
 
 
 
-VONAGE_API_KEY = '8cd6dea0'  # Replace with your Vonage API key
-VONAGE_API_SECRET = 'c7W27ZR2PeysarUA'  # Replace with your Vonage API secret
+VONAGE_API_KEY = '##################'  # Replace with your Vonage API key
+VONAGE_API_SECRET = '####################'  # Replace with your Vonage API secret
 
 @app.route('/register', methods=['GET', 'POST'])
 def register():
