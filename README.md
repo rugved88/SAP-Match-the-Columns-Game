@@ -89,9 +89,19 @@ Usage
 -----
 
 1.  Register as a new user or log in using your Google account.
-2.  Start the game by selecting a level.
-3.  Match the questions with the correct answers.
-4.  Complete all levels and view your rank on the leaderboard.
+2. **Gameplay**: You will start at Level 1. Each level contains five multiple-choice questions randomly selected from a question pool. Your objective is to answer at least three questions correctly in each level to proceed to the next one.
+
+3. **Scoring**: Points are awarded based on the difficulty of each level. You will earn 3 points for each correct answer in Level 1, 7 points in Level 2, and 10 points in Level 3. Your total score will be the sum of points earned across all levels. max score 100.
+
+4. **Progression**: If you answer at least three questions correctly in a level, you will advance to the next level. There are three levels in total.
+
+5. **Leaderboard**: After completing all three levels or answering less than three questions correctly in a level, your game will end, and you will be redirected to the leaderboard page. The leaderboard displays the ranking of all players based on their scores.
+
+6. **Logging Out**: You can log out of the game by clicking the 'Logout' button.
+
+7. **Please note that you can only play the game once per account. **
+
+8. Enjoy the game and test your SAP BTP knowledge! Good luck! ![😊](https://statics.teams.cdn.office.net/evergreen-assets/personal-expressions/v2/assets/emoticons/smileeyes/default/60_f.png?v=v11)
 
 Contributing
 ------------
