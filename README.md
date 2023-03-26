@@ -7,7 +7,7 @@ Usage
 -----
 
 1.  Register as a new user or log in using your Google account.
-2. **Gameplay**: You will start at Level 1. Each level contains five multiple-choice questions randomly selected from a question pool. Your objective is to answer at least three questions correctly in each level to proceed to the next one .
+2. **Gameplay**: You will start at Level 1. Each level contains five multiple-choice questions randomly selected from a question pool. Your objective is to answer at least three questions correctly in each level to proceed to the next one.
 
 3. **Scoring**: Points are awarded based on the difficulty of each level. You will earn 3 points for each correct answer in Level 1, 7 points in Level 2, and 10 points in Level 3. Your total score will be the sum of points earned across all levels. max score 100.
 

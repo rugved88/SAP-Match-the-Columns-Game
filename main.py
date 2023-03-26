@@ -4,14 +4,15 @@ from flask_sqlalchemy import SQLAlchemy
 from werkzeug.security import generate_password_hash, check_password_hash
 import random
 from flask_oauthlib.client import OAuth
-
+from flask_mail import Mail, Message
+import vonage
 
 app = Flask(__name__)
 app.secret_key = 'your_secret_key'
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///leaderboard.db'
 db = SQLAlchemy(app)
 
-from flask_mail import Mail, Message
+
 
 app.config['MAIL_SERVER'] = 'smtp.gmail.com'
 app.config['MAIL_PORT'] = 587
@@ -92,9 +93,6 @@ def login_google():
     return google.authorize(callback=callback)
 
 
-import random
-
-
 @app.route('/login_google/authorized')
 def authorized():
     resp = google.authorized_response()
@@ -154,7 +152,7 @@ def get_google_oauth_token():
 def generate_otp():
     return str(random.randint(100000, 999999))
 
-import vonage
+
 
 VONAGE_API_KEY = '8cd6dea0'  # Replace with your Vonage API key
 VONAGE_API_SECRET = 'c7W27ZR2PeysarUA'  # Replace with your Vonage API secret
