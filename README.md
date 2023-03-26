@@ -81,6 +81,10 @@ If you want to enable Google authentication, follow these steps:
 7.  Click on "Create" and copy the client ID and client secret.
 8.  Update the `consumer_key` and `consumer_secret` in the `app.py` file with your client ID and client secret, respectively.
 
+For Phone Number Verification we are using [Vonage Verify API](https://dashboard.nexmo.com/getting-started/verify)
+- Replace with your Vonage API key
+- Replace with your Vonage API secret
+
 Running the Application
 -----------------------
 
