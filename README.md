@@ -17,41 +17,29 @@ Installation
 
 Before running the application, ensure you have Python installed on your system.
 
-Clone the repository:
-
-bashCopy code
+1. Clone the repository:
 
 `git clone https://github.com/username/repository.git`
 
-Navigate to the project directory:
-
-bashCopy code
+2. Navigate to the project directory:
 
 `cd repository`
 
-Create a virtual environment:
-
-bashCopy code
+3. Create a virtual environment:
 
 `python -m venv venv`
 
-Activate the virtual environment:
+4. Activate the virtual environment:
 
 -   On Windows:
-
-bashCopy code
 
 `venv\Scripts\activate`
 
 -   On Linux or macOS:
 
-bashCopy code
-
 `source venv/bin/activate`
 
-Install the required packages:
-
-bashCopy code
+5. Install the required packages:
 
 `pip install -r requirements.txt`
 
@@ -79,7 +67,7 @@ Running the Application
 
 To run the application, execute the following command:
 
-bashCopy code
+
 
 `python app.py`
 
