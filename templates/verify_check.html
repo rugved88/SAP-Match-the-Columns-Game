@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1>Verify Phone Number</h1>
+    <form action="{{ url_for('verify_check') }}" method="post">
+        <label for="code">Enter the PIN sent to your phone:</label>
+        <input type="text" name="code" required>
+        <button type="submit">Submit</button>
+    </form>
+{% endblock %}

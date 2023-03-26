@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class = "edit_users">
+      <h1>Edit All Users</h1>
+      <form method="POST">
+        <table>
+          <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Surname</th>
+            <th>Company Name</th>
+            <th>Username</th>
+            <th>Phone Number</th>
+            <th>Email</th>
+            <th>Password</th>
+            <th>Score</th>
+            <th>Game Played</th>
+          </tr>
+          {% for user in users %}
+            <tr>
+              <td>{{ user.id }}</td>
+              <td><input type="text" name="name_{{ user.id }}" value="{{ user.name }}"></td>
+              <td><input type="text" name="surname_{{ user.id }}" value="{{ user.surname }}"></td>
+              <td><input type="text" name="company_name_{{ user.id }}" value="{{ user.company_name }}"></td>
+              <td><input type="text" name="username_{{ user.id }}" value="{{ user.username }}"></td>
+              <td><input type="text" name="phone_number_{{ user.id }}" value="{{ user.phone_number }}"></td>
+              <td><input type="text" name="email_{{ user.id }}" value="{{ user.email }}"></td>
+              <td><input type="password" name="password_{{ user.id }}" placeholder="New password"></td>
+              <td><input type="number" name="score_{{ user.id }}" value="{{ user.score }}"></td>
+              <td><input type="text" name="game_played_{{ user.id }}" value="{{ user.game_played }}"></td>
+              <td>
+                <form action="{{ url_for('delete_user', user_id=user.id) }}" method="post">
+                    <button type="submit" class="btn btn-danger">Delete</button>
+                </form>
+              </td>
+            </tr>
+          {% endfor %}
+        </table>
+        <button type="submit">Update</button>
+      </form>
+  </div>
+{% endblock %}

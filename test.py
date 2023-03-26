@@ -1,0 +1,17 @@
+1,  'SAP BTP is an abbreviation for': 'SAP Business Technology Platform'
+2,  'SAP BTP is a': 'Platform-as-a-Service'
+3,  'One of the key components of SAP BTP is': 'SAP HANA'
+4,  'SAP BTP provides': 'Integration services'
+5,  'SAP BTP supports': 'Multi-cloud environment'
+
+6,  'The primary programming language for SAP BTP is': 'Java'
+7,  'SAP BTP allows developers to build': 'Extensions for SAP solutions'
+8,  'SAP BTP offers analytics capabilities through': 'SAP Analytics Cloud'
+9,  'SAP BTP includes a service called': 'SAP API Management'
+10,  'SAP BTP uses which database technology': 'SAP HANA'
+
+11,  'Which SAP BTP service enables IoT capabilities?': 'SAP IoT Services'
+12,  'What is the name of the low-code development tool in SAP BTP?',: 'SAP AppGyver'
+13,  'SAP BTP allows developers to use which serverless runtime?',: 'SAP Cloud Functions'
+14,  'Which service in SAP BTP enables AI capabilities?',: 'SAP AI Business Services'
+15,  'What is the name of the blockchain service in SAP BTP?',: 'SAP Blockchain Services'

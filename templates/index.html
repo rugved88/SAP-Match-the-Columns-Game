@@ -1,0 +1,81 @@
+{% extends "base.html" %}
+
+{% block title %}Match the Column: SAP BTP{% endblock %}
+
+{% block bodytag %}<body class="index-body">{% endblock %}
+
+{% block content %}
+
+    <div class="container">
+        <h1>Match the Column: SAP BTP Game</h1>
+        <h2> Test your knowledge 😈: Max Score 💯</h2>
+        {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                <ul class="flash-messages">
+                    {% for message in messages %}
+                        <li>{{ message }}</li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
+        {% endwith %}
+        <form action="/" method="post">
+            <input type="hidden" name="level" value="{{ level }}">
+            <div class="columns">
+                <div class="questions">
+                    <h2>Questions</h2>
+                    {% for question in questions %}
+                        <div class="question" ondrop="drop(event, this)" ondragover="allowDrop(event)">
+                            <span class="question-text" id="question_{{ question.id }}">{{ question.question }}</span>
+                            <input type="hidden" id="answer_{{ question.id }}" name="answer_{{ question.id }}" value="">
+                        </div>
+                    {% endfor %}
+                </div>
+                <div class="answers">
+                    <h2>Answers</h2>
+                    <p>Drag the Answers to the Right Questions</p>
+                    {% for answer in answers %}
+                        <div class="answer" draggable="true" ondragstart="drag(event)">
+                            {{ answer }}
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+    <script>
+        function allowDrop(ev) {
+            ev.preventDefault();
+        }
+
+       function drag(ev) {
+            ev.dataTransfer.setData("text", ev.target.innerText.trim());
+        }
+
+
+        function drop(ev, target) {
+            ev.preventDefault();
+            var answer = ev.dataTransfer.getData("text");
+            console.log('Dropped answer:', answer);
+
+            var previousAnswer = target.querySelector(".answer");
+            if (previousAnswer) {
+                document.querySelector(".answers").appendChild(previousAnswer);
+            }
+
+            var draggedElem = Array.from(document.querySelectorAll('.answer')).find(el => el.innerText.trim() === answer);
+            target.insertBefore(draggedElem, target.querySelector(".question-text").nextSibling);
+
+            var inputElement = document.getElementById("answer_" + target.querySelector(".question-text").id.split("_")[1]);
+            inputElement.value = answer.trim();
+
+            console.log('Updated input element:', inputElement);
+
+            // Add the 'attempted' class to the question when an answer is dragged to it
+            target.classList.add('attempted');
+        }
+
+    </script>
+
+{% endblock %}

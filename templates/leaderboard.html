@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% block bodytag %}<body class="leaderboard-body">{% endblock %}
+{% block content %}
+
+
+  <div class="leaderboard-container">
+    <h1> 🎖  Leaderboard 🎖️</h1>
+    {% if user_rank > 0 %}
+      <h2>Your rank: {{ user_rank }}</h2>
+      <h2>Your score: {{ user_score }}</h2>
+    {% endif %}
+    <table class="leaderboard-table">
+      <thead>
+        <tr>
+          <th>Rank</th>
+          <th>Username</th>
+          <th>Score</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for user in users %}
+          <tr class="{{ loop.first and 'winner' }} {{ current_user is defined and user.id == current_user.id and 'highlight-user' }}">
+            <td>{{ loop.index }}</td>
+            <td>{{ user.username }}</td>
+            <td>{{ user.score }}</td>
+          </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+{% endblock %}
