@@ -101,7 +101,8 @@ Usage
 
 7. **Please note that you can only play the game once per account. **
 
-8. Enjoy the game and test your SAP BTP knowledge! Good luck! ![😊](https://statics.teams.cdn.office.net/evergreen-assets/personal-expressions/v2/assets/emoticons/smileeyes/default/60_f.png?v=v11)
+8. Enjoy the game and test your SAP BTP knowledge! Good luck! !😊
+[😈 Press Here ](https://statics.teams.cdn.office.net/evergreen-assets/personal-expressions/v2/assets/emoticons/smileeyes/default/60_f.png?v=v11)
 
 Contributing
 ------------
